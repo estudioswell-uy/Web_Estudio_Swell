@@ -45,8 +45,13 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="space-y-5 rounded-[2rem] bg-swell-white/5 backdrop-blur-lg border border-swell-white/10 p-8 md:p-10 shadow-2xl"
-            onSubmit={(e) => e.preventDefault()}
+            action="https://formsubmit.co/hola@estudioswell.com"
+            method="POST"
           >
+            {/* Opciones de FormSubmit */}
+            <input type="hidden" name="_subject" value="Nueva consulta desde la web de Estudio Swell" />
+            <input type="hidden" name="_template" value="box" />
+            
             <div className="grid gap-5 sm:grid-cols-2">
               <div className="space-y-1.5">
                 <label htmlFor="contact-name" className="text-[10px] font-bold uppercase tracking-widest text-swell-muted">Nombre</label>
@@ -54,6 +59,7 @@ export default function Contact() {
                   id="contact-name"
                   name="name"
                   type="text"
+                  required
                   autoComplete="name"
                   placeholder="Tu nombre…"
                   className="w-full rounded-xl bg-swell-white/5 p-3.5 text-sm outline-none border border-transparent focus:border-swell-blue focus-visible:ring-1 focus-visible:ring-swell-blue/50 transition-all"
@@ -67,6 +73,7 @@ export default function Contact() {
                   id="contact-email"
                   name="email"
                   type="email"
+                  required
                   autoComplete="email"
                   placeholder="hola@ejemplo.com…"
                   className="w-full rounded-xl bg-swell-white/5 p-3.5 text-sm outline-none border border-transparent focus:border-swell-blue focus-visible:ring-1 focus-visible:ring-swell-blue/50 transition-all"
@@ -81,13 +88,14 @@ export default function Contact() {
                 id="contact-message"
                 name="message"
                 rows={4}
+                required
                 placeholder="¿En qué podemos ayudarte?…"
                 className="w-full rounded-xl bg-swell-white/5 p-3.5 text-sm outline-none border border-transparent focus:border-swell-blue focus-visible:ring-1 focus-visible:ring-swell-blue/50 transition-all resize-none"
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               />
             </div>
-            <button className="flex w-full items-center justify-center gap-2 rounded-xl bg-swell-blue py-3.5 font-display font-bold text-base text-white shadow-lg shadow-swell-blue/20 transition-all hover:opacity-90 active:scale-[0.98]">
+            <button type="submit" className="flex w-full items-center justify-center gap-2 rounded-xl bg-swell-blue py-3.5 font-display font-bold text-base text-white shadow-lg shadow-swell-blue/20 transition-all hover:opacity-90 active:scale-[0.98]">
               Enviar mensaje <Send size={16} aria-hidden="true" />
             </button>
           </motion.form>
