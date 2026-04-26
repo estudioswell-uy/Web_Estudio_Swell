@@ -77,7 +77,9 @@ export default function Pricing() {
 
           <div className="space-y-4">
             <a 
-              href="#contact"
+              href="https://wa.me/message/NUC5USYCEZNON1"
+              target="_blank"
+              rel="noopener noreferrer"
               className="block w-full text-center rounded-xl bg-swell-blue py-4 font-display font-bold text-base text-white shadow-xl shadow-swell-blue/20 transition-all hover:scale-[1.01] hover:bg-swell-blue/90 active:scale-[0.99]"
             >
               Comenzar mi proyecto hoy

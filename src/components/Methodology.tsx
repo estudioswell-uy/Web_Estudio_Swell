@@ -90,7 +90,9 @@ export default function Methodology() {
             <p className="text-swell-white/60">No pierdas más clientes frente a la competencia.</p>
           </div>
           <a 
-            href="https://wa.me/59899145565" 
+            href="https://wa.me/message/NUC5USYCEZNON1" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-10 py-4 bg-swell-blue hover:bg-blue-600 text-white font-bold rounded-full transition-all shadow-lg shadow-swell-blue/20 active:scale-95"
           >
             Quiero mi diagnóstico gratis

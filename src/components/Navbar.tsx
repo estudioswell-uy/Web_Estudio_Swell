@@ -63,7 +63,7 @@ export default function Navbar() {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://wa.me/59899145565"
+              href="https://wa.me/message/NUC5USYCEZNON1"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden items-center gap-2 rounded-full border border-swell-white/10 bg-swell-white/5 p-1.5 text-swell-white transition-all hover:bg-swell-white/10 md:flex px-4"
@@ -111,7 +111,9 @@ export default function Navbar() {
 
             <div className="mt-12 flex flex-col items-center gap-4">
               <a
-                href="https://wa.me/59899145565"
+                href="https://wa.me/message/NUC5USYCEZNON1"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-3 rounded-full bg-swell-blue px-8 py-4 font-display font-bold text-white shadow-xl shadow-swell-blue/20"
               >
                 <Phone size={18} aria-hidden="true" />

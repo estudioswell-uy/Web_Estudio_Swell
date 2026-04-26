@@ -24,7 +24,7 @@ export default function Contact() {
 
             <div className="space-y-4">
               <a
-                href="https://wa.me/59899145565"
+                href="https://wa.me/message/NUC5USYCEZNON1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 rounded-2xl border border-green-500/10 bg-green-500/5 p-5 transition-all hover:bg-green-500/10 group max-w-sm"

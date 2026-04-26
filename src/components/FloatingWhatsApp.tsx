@@ -3,9 +3,7 @@ import { MessageCircle } from 'lucide-react';
 
 export default function FloatingWhatsApp() {
   const shouldReduceMotion = useReducedMotion();
-  const phoneNumber = "59899145565"; 
-  const message = "Hola! Vi su web y me gustaría cotizar un proyecto.";
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = "https://wa.me/message/NUC5USYCEZNON1";
 
   return (
     <motion.a

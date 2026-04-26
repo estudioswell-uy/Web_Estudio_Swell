@@ -29,7 +29,9 @@ export default function Hero() {
 
           <div className="flex flex-col items-center gap-8 sm:flex-row lg:items-center">
             <a 
-              href="#contact"
+              href="https://wa.me/message/NUC5USYCEZNON1"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-swell-blue px-8 py-4 font-display font-bold text-white shadow-xl shadow-swell-blue/20 transition-transform hover:scale-[1.02] active:scale-[0.98]"
             >
               Quiero mi web ahora
@@ -71,7 +73,7 @@ export default function Hero() {
           <div className="grid grid-cols-2 gap-4 rounded-2xl border border-swell-white/10 bg-swell-white/5 backdrop-blur-md p-6">
             <div className="flex flex-col justify-center">
               <h4 className="text-[10px] font-bold uppercase text-swell-white/40">WhatsApp Directo</h4>
-              <p className="text-sm font-medium">+598 99 145 565</p>
+              <a href="https://wa.me/message/NUC5USYCEZNON1" target="_blank" rel="noopener noreferrer" className="text-sm font-medium hover:text-swell-blue transition-colors">+598 99 145 565</a>
             </div>
             <div className="flex flex-col justify-center border-l border-white/10 pl-4">
               <h4 className="text-[10px] font-bold uppercase text-swell-white/40">Ubicación</h4>

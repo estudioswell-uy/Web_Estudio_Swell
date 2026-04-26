@@ -117,7 +117,7 @@ export default function FAQ() {
         </motion.div>
         
         <p className="mt-8 text-center text-xs text-swell-muted">
-          ¿Tenés otra pregunta? <a href="#contact" className="text-swell-blue font-bold hover:underline">Escribinos directo por WhatsApp</a>.
+          ¿Tenés otra pregunta? <a href="https://wa.me/message/NUC5USYCEZNON1" target="_blank" rel="noopener noreferrer" className="text-swell-blue font-bold hover:underline">Escribinos directo por WhatsApp</a>.
         </p>
       </div>
     </section>
