@@ -66,13 +66,20 @@ export default function Navbar() {
         <div className={`mx-auto flex max-w-7xl items-center justify-between rounded-xl border border-swell-white/10 bg-swell-bg/80 px-6 py-2 backdrop-blur-xl transition-[box-shadow] duration-300 ${
           scrolled ? 'shadow-lg shadow-black/20' : ''
         }`}>
-          <div className="flex items-center gap-2">
+          <button 
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              window.history.pushState('', document.title, window.location.pathname + window.location.search);
+            }}
+            className="flex items-center gap-2 transition-transform hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+            aria-label="Ir al inicio"
+          >
             <Waves className="text-swell-blue" size={20} aria-hidden="true" />
             <div className="font-sans tracking-tight text-swell-white">
               <span className="text-[13px] font-light uppercase">Estudio</span>
               <span className="ml-1 text-[13px] font-extrabold uppercase text-swell-blue">Swell</span>
             </div>
-          </div>
+          </button>
 
           <div className="hidden items-center gap-8 md:flex">
             {navLinks.map((link) => (
