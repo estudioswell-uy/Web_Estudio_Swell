@@ -55,7 +55,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="max-w-xs text-center text-xs leading-relaxed text-swell-muted md:text-left">
-              Transformamos la presencia digital de negocios locales en Punta del Este con diseño de alta velocidad y conversión.
+              Transformamos la presencia digital de negocios locales con diseño de alta velocidad y conversión.
             </p>
           </div>
 
