@@ -22,10 +22,35 @@ export default function Navbar() {
     { name: 'Contacto', href: '#contact' },
   ];
 
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const id = href.replace('#', '');
+      const element = document.getElementById(id);
+      
+      if (element) {
+        const offset = 100;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+
+        // Limpiar la URL para que no muestre el '#'
+        window.history.pushState('', document.title, window.location.pathname + window.location.search);
+      }
+      setIsOpen(false);
+    }
+  };
+
+
   return (
     <>
       <a 
         href="#main-content" 
+        onClick={(e) => handleLinkClick(e, '#main-content')}
         className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-swell-blue focus:px-4 focus:py-2 focus:text-white"
       >
         Saltar al contenido principal
@@ -54,6 +79,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => handleLinkClick(e, link.href)}
                 className="text-[11px] font-bold uppercase tracking-widest text-swell-white/40 transition-colors hover:text-swell-white"
               >
                 {link.name}
@@ -101,7 +127,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => handleLinkClick(e, link.href)}
                   className="font-display text-2xl font-bold tracking-tight text-swell-white hover:text-swell-blue"
                 >
                   {link.name}
